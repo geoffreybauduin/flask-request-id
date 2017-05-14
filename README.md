@@ -3,6 +3,8 @@
 
 A simple request id middleware for Flask.
 
+`pip install flask-request-id-middleware`
+
 ## How to use it ?
 
 ```python
