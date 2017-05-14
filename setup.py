@@ -16,7 +16,7 @@ setup(
     author_email='bauduin.geo@gmail.com',
     maintainer='Geoffrey Bauduin',
     maintainer_email='bauduin.geo@gmail.com',
-    description="Adds Request ID inside your http reuqests to better identify what's happenning on your app",
+    description="Adds Request ID inside your http requests to better identify what's happening on your app",
     long_description=__doc__,
     packages=['flask_request_id'],
     zip_safe=False,
@@ -28,7 +28,7 @@ setup(
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
+        'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development :: Libraries :: Python Modules',
