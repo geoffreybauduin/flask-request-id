@@ -8,7 +8,7 @@ Adds Request ID inside your http requests to better identify what's happening on
 from setuptools import setup
 
 setup(
-    name='flask_request_id',
+    name='flask-request-id-middleware',
     version='1.0',
     url='http://github.com/geoffreybauduin/flask-request-id',
     license='MIT',
