@@ -6,14 +6,20 @@ def _request_id_from_uuid():
 
 
 class RequestID(object):
-    def __init__(self, app, header_name="X-Request-ID", generator_func=_request_id_from_uuid,
-                 request_field_name="request_id"):
+    def __init__(self, app, header_name="X-Request-ID", generator_func=_request_id_from_uuid):
+        """
+        Adds the Request ID middleware to your current app
+        :param app: Flask APP
+        :param header_name: The header name returned, X-Request-ID by default
+        :type header_name: string 
+        :param generator_func: Generator function, returning a string. By default, will generate an uuid v4
+        :type generator_func: func
+        """
         # Use wsgi_app
         self.app = app.wsgi_app
         self._header_name = header_name
         self._flask_header_name = header_name.upper().replace("-", "_")
         self._generator_func = generator_func
-        self._request_field_name = request_field_name
         # Change your app wsgi_app
         app.wsgi_app = self
 
