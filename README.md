@@ -24,6 +24,14 @@ def _get_request_id():
     return request.environ.get("FLASK_REQUEST_ID")
 ```
 
+# Contributing
+
+Feel free to open a PR or an issue if you feel like discussing about something.
+
+To launch unit tests:
+
+`tox`
+
 # License
 
 MIT License
