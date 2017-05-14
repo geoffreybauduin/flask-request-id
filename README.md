@@ -1,4 +1,5 @@
 # Flask Request ID
+[![Build Status](https://travis-ci.org/geoffreybauduin/flask-request-id.svg?branch=master)](https://travis-ci.org/geoffreybauduin/flask-request-id)
 
 A simple request id middleware for Flask.
 
