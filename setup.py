@@ -8,7 +8,7 @@ Adds Request ID inside your http requests to better identify what's happening on
 from setuptools import setup
 
 setup(
-    name='Flask-Request-ID',
+    name='flask_request_id',
     version='1.0',
     url='http://github.com/geoffreybauduin/flask-request-id',
     license='MIT',
@@ -24,7 +24,7 @@ setup(
     install_requires=[
         'Flask>=0.10',
     ],
-    test_suite='tests.suite',
+    test_suite='tests',
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
