@@ -26,6 +26,23 @@ def _get_request_id():
     return request.environ.get("FLASK_REQUEST_ID")
 ```
 
+## Customizing
+
+#### Custom header name
+
+```python
+RequestID(app, header_name="my-custom-header-name")
+```
+
+#### Custom request id generator
+
+```python
+def _generate():
+    return "".join([random.choice("abcdef") for _ in range(12)])
+    
+RequestID(app, generator_func=_generator)
+```
+
 # Contributing
 
 Feel free to open a PR or an issue if you feel like discussing about something.
