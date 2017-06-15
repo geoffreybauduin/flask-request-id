@@ -11,7 +11,7 @@ class RequestID(object):
         Adds the Request ID middleware to your current app
         :param app: Flask APP
         :param header_name: The header name returned, X-Request-ID by default
-        :type header_name: string 
+        :type header_name: string
         :param generator_func: Generator function, returning a string. By default, will generate an uuid v4
         :type generator_func: func
         """
@@ -24,8 +24,9 @@ class RequestID(object):
         app.wsgi_app = self
 
     def __call__(self, environ, start_response):
-        req_id = self._generator_func()
-        environ["HTTP_{0}".format(self._flask_header_name)] = req_id
+        header_key = "HTTP_{0}".format(self._flask_header_name)
+        environ.setdefault(header_key, self._generator_func())
+        req_id = environ[header_key]
         environ["FLASK_REQUEST_ID"] = req_id
 
         def new_start_response(status, response_headers, exc_info=None):
