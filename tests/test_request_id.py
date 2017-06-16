@@ -45,3 +45,12 @@ def test_req_id_custom_generator(app, client):
     assert r.status_code == 200
     assert r.headers['App-Request-ID'] == "test-request-id"
     assert r.data.decode("utf-8") == "test-request-id"
+
+
+def test_req_id_passthrough(app, client):
+    RequestID(app)
+    request_id = "test-request-id2"
+    r = client.get("/", headers={'X-Request-ID': request_id})
+    assert r.status_code == 200
+    assert r.headers['X-Request-ID'] == request_id
+    assert r.data.decode("utf-8") == request_id
