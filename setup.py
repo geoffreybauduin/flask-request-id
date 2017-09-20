@@ -9,7 +9,7 @@ from setuptools import setup
 
 setup(
     name='flask-request-id-middleware',
-    version='1.0',
+    version='1.1',
     url='http://github.com/geoffreybauduin/flask-request-id',
     license='MIT',
     author='Geoffrey Bauduin',
